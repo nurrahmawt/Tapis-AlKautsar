@@ -9,10 +9,6 @@
 
   --shadow-card: 0 8px 24px rgba(0,0,0,0.06);
   --transition: 200ms ease;
-
-  font-family: -apple-system, BlinkMacSystemFont,
-               "SF Pro Text", "Helvetica Neue",
-               Arial, sans-serif;
 }
 
 /* ===== Layout ===== */
