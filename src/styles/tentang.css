@@ -1,0 +1,70 @@
+.tentang-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.tentang-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #0f172a;
+}
+
+.tentang-card {
+  display: flex;
+  gap: 32px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.tentang-image {
+  flex: 0 0 260px;
+}
+
+.tentang-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.tentang-content {
+  flex: 1;
+}
+
+.tentang-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.tentang-role {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.tentang-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .tentang-card {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .tentang-image img {
+    height: 260px;
+  }
+}

@@ -1,0 +1,185 @@
+:root {
+  --primary: #73c9de;
+  --primary-dark: #5a189a;
+  --danger: #e63946;
+  --success: #2a9d8f;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg-soft: #f8fafc;
+}
+
+/* ===== CONTAINER ===== */
+.admin-container {
+  max-width: 520px;
+  margin: 48px auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* ===== TITLES ===== */
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.admin-container h3 {
+  margin-top: 36px;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ===== INPUTS ===== */
+.admin-container input,
+.admin-container select,
+.admin-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.admin-container textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.admin-container input:focus,
+.admin-container select:focus,
+.admin-container textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(123,44,191,0.15);
+}
+
+/* ===== CHAR COUNTER ===== */
+.admin-container small {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* ===== MAIN BUTTON ===== */
+.admin-container button {
+  width: 100%;
+  padding: 13px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.admin-container button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ===== LIST ===== */
+.admin-item {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-item span {
+  font-size: 0.9rem;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.admin-item span em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.admin-item.inactive {
+  opacity: 0.55;
+}
+
+/* ===== ACTIONS ===== */
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-actions button {
+  width: auto;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* EDIT */
+.admin-actions button:first-child {
+  background: #e9d5ff;
+  color: #fefcfb;
+}
+
+.admin-actions button:first-child:hover {
+  background: #d8b4fe;
+}
+
+/* HIDE / SHOW */
+.hide-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.hide-btn:hover {
+  background: #d1d5db;
+}
+
+/* ===== SEPARATOR ===== */
+.admin-container hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 520px) {
+  .admin-container {
+    margin: 24px 16px;
+    padding: 22px;
+  }
+}
+
+/* ===== LOGOUT SECTION ===== */
+.logout-section {
+  margin-top: 12px;
+  padding-top: 8px;
+}
+
+.logout-btn {
+  width: 100%;
+  background: var(--danger);
+  font-weight: 700;
+}
+
+.logout-btn:hover {
+  background: #d62828;
+}
