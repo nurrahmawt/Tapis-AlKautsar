@@ -130,7 +130,6 @@
   }
 }
 
-/* ===== Desktop (optional tapi aman) ===== */
 @media (min-width: 640px) {
   .category-grid {
     flex-direction: row;

@@ -144,7 +144,7 @@
 
 .wa-btn {
   display: inline-flex !important;
-  flex-direction: row !important;   /* 🔥 INI KUNCI */
+  flex-direction: row !important;   
   align-items: center !important;
   justify-content: center;
 
