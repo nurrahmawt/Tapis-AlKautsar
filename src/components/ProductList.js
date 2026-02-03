@@ -34,9 +34,25 @@ function ProductList() {
       minimumFractionDigits: 0
     }).format(angka);
 
+  const buatPesanWA = (p) => {
+    const pesan = `
+Halo,
+Saya tertarik dengan produk berikut:
+
+• Produk : ${p.kategori}
+• Motif  : ${p.nama}
+• Harga  : ${formatRupiah(Number(p.harga.replace(/\./g, "")))}
+• Waktu  : ${p.waktu}
+
+Mohon info lebih lanjut.
+Terima kasih.
+    `;
+    return encodeURIComponent(pesan);
+  };
+
   return (
     <>
-      {/* ===== BREADCRUMB (FULL WIDTH) ===== */}
+      {/* ===== BREADCRUMB ===== */}
       <div className="breadcrumb-bar">
         <nav className="breadcrumb">
           <Link to="/" className="crumb">Home</Link>
@@ -70,7 +86,7 @@ function ProductList() {
                   <h3 className="product-title">{p.nama}</h3>
 
                   <p className="product-desc">
-                    {p.deskripsi.split("\n").map((line, i) => (
+                    {p.deskripsi?.split("\n").map((line, i) => (
                       <span key={i}>
                         {line}
                         <br />
@@ -79,11 +95,8 @@ function ProductList() {
                   </p>
 
                   <p className="price">
-                  <span className="price-icon">🏷️</span>
-                  {formatRupiah(
-                    Number(p.harga.replace(/\./g, ""))
-                  )}
-                </p>
+                    🏷️ {formatRupiah(Number(p.harga.replace(/\./g, "")))}
+                  </p>
 
                   <p className="meta-info">
                     🕒 Estimasi Pengerjaan: {p.waktu}
@@ -91,7 +104,7 @@ function ProductList() {
 
                   <a
                     className="wa-btn"
-                    href={`https://wa.me/6281912479025?text=Halo, saya tertarik dengan ${p.nama}`}
+                    href={`https://wa.me/6281912479025?text=${buatPesanWA(p)}`}
                     target="_blank"
                     rel="noreferrer"
                   >
